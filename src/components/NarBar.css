@@ -1,0 +1,29 @@
+
+
+nav { display: flex;
+position: fixed; 
+top: 0;
+width: 100%;
+left: 0;
+        justify-content: space-between;
+    background-color: rgb(34, 6, 89);
+
+    img {
+        height: 100px;
+        width: 100px;
+        padding-left: 30px;
+    }
+    ul {
+        display: flex;
+        gap: 15px;
+        padding-right: 15px;
+        li {
+            list-style-type: none;
+        }
+    }
+    .changuito {
+        width: 80px;
+        height: 80px;
+        padding-right: 30px;
+    }
+}
