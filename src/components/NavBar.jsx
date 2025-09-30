@@ -1,28 +1,30 @@
 import './NarBar.css'
+import CartWidget from './CartWidget';
+import { Link } from 'react-router';
 
 export default function NavBar () {
     return (
-        <nav>
-            <img src="/logo.png" alt="" />
+        <nav> 
             <ul>
+                <Link to="/"> 
+            <img src="/public/img/logo.png" alt="" />
+            </Link>
+            <Link to="/detalle">
+            Detalle
+            </Link>
                 <li>
-                    <a href="">Refrigerantes</a>
+                    <Link to="/category/cambio de aceite">Cambio de aceite</Link>
                 </li>
                 <li>
-                    <a href="">Aceites Sintéticos</a>
+                    <Link to="/category/bujías">Bujías</Link>
                 </li>
                 <li>
-                    <a href="">Aceites Semisintéticos</a></li>
-                <li>
-                    <a href="">Aceites Minerales</a>
-                </li>
-                <li>
-                    <a href="">Líquidos de frenos</a>
+                    <Link to="/category/pastillas de freno">Pastillas de freno</Link>
                 </li>
             </ul>
-            <img src="/cart4.svg" alt="" className="changuito" />
-            {/*Mostrar CartWidget sólo item sin funcionalidad*/ }
-
+            <Link to="/cart">
+            <CartWidget/>
+            </Link>
         </nav>
     )
 }

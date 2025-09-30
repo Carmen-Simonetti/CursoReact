@@ -1,7 +1,17 @@
 .item-card {
-    display: flex;
     border: 2px solid black;
     flex-direction: column;
     align-items: center;
-    width: 350px;
+    width: 250px;
+    img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.div-products {
+    display: flex; 
+    gap: 50px;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
