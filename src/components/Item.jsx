@@ -21,7 +21,7 @@ function Item (props) {
         <div className="item-card">
             <h2 className="item-card-title">{title}</h2>
             <img 
-            src={img} 
+            src={props.img} 
             alt={props.title} 
             />
             <h3 className="item-card-price"> Precio: $ {price}</h3>
