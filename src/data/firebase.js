@@ -74,3 +74,5 @@ export async function exportProductsData() {
   }
 }
 export default app;
+
+exportProductsData();
