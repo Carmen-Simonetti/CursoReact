@@ -11,6 +11,7 @@ function getMockAPIdata() {
 
 
 export function getProductById(idRequested) {
+    //buscamos un unico valor con find
     //forEach, .map, .find
     const reqItem = products.find((item) => item.id === Number(idRequested))
     const promiseProduct = new Promise((res, rej) => {
@@ -21,4 +22,20 @@ export function getProductById(idRequested) {
     })
 return promiseProduct
 }
+
+
+export function getProductByCateg (categRequested) {
+    //genero un nuevo array me devuelve el valor que cumpla cierta condicion
+    const productsFilter = products.filter ( item => item.category === categRequested);
+
+    return new Promise ( (resolve) => {
+        setTimeout ( () => {
+            console.log("productos devueltos..", productsFilter);
+            
+resolve (productsFilter)
+        } , 1000)
+    })
+
+}
+
 export default getMockAPIdata;

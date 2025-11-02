@@ -6,7 +6,7 @@ const products = [
         description: 'aceite sintético 5w-40',
         price: '$119999',
         stock: '20',
-        category: 'cambio de aceite'
+        category: 'Cambio de aceite'
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const products = [
         description: 'aceite semisintético 10w-40',
         price: '$69999',
         stock: '40',
-        category: 'cambio de aceite'
+        category: 'Cambio de aceite'
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const products = [
         description: 'aceite mineral 15w-40',
         price: '$49999',
         stock: '15',
-        category: 'cambio de aceite'
+        category: 'Cambio de aceite'
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ const products = [
         description: 'Bujías frías de alto rendimiento',
         price: '$5000',
         stock: '30',
-        category: 'bujías'
+        category: 'Bujías'
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ const products = [
         description: 'Mayor durabilidad y mejor chispa',
         price: '$5000',
         stock: '25',
-        category: 'bujías'
+        category: 'Bujías'
     },
     {
         id: 6,
@@ -51,7 +51,7 @@ const products = [
         description: 'Especiales para motores diésel',
         price: '$5000',
         stock: '15',
-        category: 'bujías'
+        category: 'Bujías'
     },
     {
         id: 7,
@@ -60,7 +60,7 @@ const products = [
         description: 'Encendido más eficiente',
         price: '$15000',
         stock: '20',
-        category: 'bujías'
+        category: 'Bujías'
     },
     {
         id: 8,
@@ -69,7 +69,7 @@ const products = [
         description: 'Diseñadas para condiciones frías',
         price: '$15000',
         stock: '18',
-        category: 'bujías'
+        category: 'Bujías'
     },
     {
         id: 9,
@@ -78,16 +78,16 @@ const products = [
         description: 'Alta resistencia y rendimiento superior',
         price: '$15000',
         stock: '22',
-        category: 'bujías'
+        category: 'Bujías'
     },
     {
         id: 10,
-        title: 'Bujías de resistencia desnuda',
+        title: 'Bujías de resistencia',
         img: 'https://placehold.co/400',
         description: 'Diseño especializado de alto desempeño',
         price: '$15000',
         stock: '10',
-        category: 'bujías'
+        category: 'Bujías'
     },
     {
         id: 11,
@@ -96,7 +96,7 @@ const products = [
         description: 'Gran conductividad a menor costo',
         price: '$15000',
         stock: '35',
-        category: 'bujías'
+        category: 'Bujías'
     },
     {
         id: 12,
@@ -105,7 +105,7 @@ const products = [
         description: 'Material: metal y otros minerales. Ventajas: buena durabilidad y rendimiento.',
         price: '$20000',
         stock: '25',
-        category: 'pastillas de freno'
+        category: 'Pastillas de freno'
     },
     {
         id: 13,
@@ -114,7 +114,7 @@ const products = [
         description: 'Material: fibra y caucho. Ventajas: silenciosas y generan menos desgaste en los discos.',
         price: '$15000',
         stock: '30',
-        category: 'pastillas de freno'
+        category: 'Pastillas de freno'
     },
     {
         id: 14,
@@ -123,7 +123,7 @@ const products = [
         description: 'Material: cerámica. Ventajas: rendimiento silencioso y menos agresivas para los discos.',
         price: '$10000',
         stock: '20',
-        category: 'pastillas de freno'
+        category: 'Pastillas de freno'
     }
 ];
 

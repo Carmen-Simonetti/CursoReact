@@ -1,15 +1,23 @@
 
 import Item from './Item';
-import getMockAPIdata from '../data/mockAPI';
+import { getProducts, getProductByCateg } from '../data/firebase';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 
 export default function ItemListContainer(props) {
     //1° useState --> guardo el listado de items
     const [products, setProducts] = useState([]);
+    const {categParam} = useParams();
     //2° useEffect --> controlo la peticion de datos a la API (MockAPI)devolviendome despues de 2 seg el array se ejecuta el .then
+    
     useEffect(() => {
+        if (categParam) {
+            //llamar por categoría
+            getProductByCateg(categParam).then (getProductByCateg => setProducts (getProductByCateg))
+        }
+        else {
         //3° fetch o solicitud simulada
-        getMockAPIdata()
+        getProducts()
             .then((productList) => {
                //guardar el listado de productos en setProducts
                setProducts(productList);
@@ -18,8 +26,24 @@ export default function ItemListContainer(props) {
             console.log("Error solicitando los datos", error);
             alert("Algo salió mal buscando los productos")
         })
-    }, [])
+        }
+    }, [ categParam ])
+function productKey(prod) {
+      const copy = { ...prod };
+      delete copy.id;
+      return Object.keys(copy)
+        .sort()
+        .map(k => `${k}:${JSON.stringify(copy[k])}`)
+        .join('|');
+    }
 
+    const uniqueProducts = Object.values(
+      products.reduce((acc, prod) => {
+        const key = productKey(prod);
+        if (!acc[key]) acc[key] = prod;
+        return acc;
+      }, {})
+    );
     return (
         <div className='item-list-container'>
             <h1>{props.greeting}</h1>
@@ -33,7 +57,7 @@ export default function ItemListContainer(props) {
                 {/*abro llaves para meter js. en item.title vuelvo a usar jsx x eso pongo llaves de nuevo*/}
                 <div className='div-products'>
                     {
-                        products.map(item => <Item key={item.id} {...item} />)
+                        uniqueProducts.map(item => <Item key={item.id} {...item} />)
                     }
                 </div>
             </div>

@@ -13,13 +13,13 @@ export default function NavBar () {
             Detalle
             </Link>
                 <li>
-                    <Link to="/category/cambio de aceite">Cambio de aceite</Link>
+                    <Link to="/category/Cambio de aceite">Cambio de aceite</Link>
                 </li>
                 <li>
-                    <Link to="/category/bujías">Bujías</Link>
+                    <Link to="/category/Bujías">Bujías</Link>
                 </li>
                 <li>
-                    <Link to="/category/pastillas de freno">Pastillas de freno</Link>
+                    <Link to="/category/Pastillas de freno">Pastillas de freno</Link>
                 </li>
             </ul>
             <Link to="/cart">

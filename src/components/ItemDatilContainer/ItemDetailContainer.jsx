@@ -1,20 +1,22 @@
 import StateComponent from "../StateComponent"
-import { getProductById } from "../../data/mockAPI"
+import { getProductById } from "../../data/firebase"
 import { useParams } from "react-router";
-import { useState,useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import cartContext from "../../context/cartContext";
 
 
 
 function ItemDetailContainer() {
     const {idParam} = useParams()
 const [product,setProduct] = useState({});
+const context = useContext(cartContext); //envío información para eso creo una funcion que podamos llamar dentro de context
 useEffect (   ()  =>  {
     //me devuelve una promesa que guardo en product
-    getProductById(idParam).then(  res  => setProduct(product))
+    getProductById(idParam)
+    .then(  res  => setProduct(res))
+    .catch( error => alert(error))
 }, [])
 
-
-    getProductById(idParam);
 
     return (
     <div className="item-card">
@@ -30,7 +32,7 @@ useEffect (   ()  =>  {
                 <p>{product.description}</p>
             </div>
             <div>
-                <button>
+                <button onClick={ () => context.addToCart (product)}>
                   Agregar al carrito  
                 </button>
             </div>
