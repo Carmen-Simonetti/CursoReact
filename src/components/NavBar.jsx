@@ -7,7 +7,7 @@ export default function NavBar () {
         <nav> 
             <ul>
                 <Link to="/"> 
-            <img src="/public/img/logo.png" alt="" />
+            <img src="../public/img/logo.png" alt="" />
             </Link>
             <Link to="/detalle">
             Detalle
