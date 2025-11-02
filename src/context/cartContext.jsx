@@ -1,4 +1,5 @@
-import { cartItems, createContext, useState } from "react";
+import { createContext, useState } from "react";
+
 
 const cartContext = createContext();
 // 4. Crear un Custom Provider -> componente
