@@ -2,7 +2,7 @@ const products = [
     {
         id: 1,
         title: 'Combo Sintético',
-        img: 'public/img/sintetico.webp',
+        img: '/img/sintetico.webp',
         description: 'aceite sintético 5w-40',
         price: '$119999',
         stock: '20',
@@ -11,7 +11,7 @@ const products = [
     {
         id: 2,
         title: 'Combo Semisintético',
-        img: '../img/semi.webp',
+        img: '/img/semi.webp',
         description: 'aceite semisintético 10w-40',
         price: '$69999',
         stock: '40',
@@ -20,7 +20,7 @@ const products = [
     {
         id: 3,
         title: 'Combo Mineral',
-        img: 'public/img/mineral.webp',
+        img: '/img/mineral.webp',
         description: 'aceite mineral 15w-40',
         price: '$49999',
         stock: '15',
