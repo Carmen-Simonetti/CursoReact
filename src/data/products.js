@@ -11,7 +11,7 @@ const products = [
     {
         id: 2,
         title: 'Combo Semisintético',
-        img: '../public/img/semi.webp',
+        img: '../img/semi.webp',
         description: 'aceite semisintético 10w-40',
         price: '$69999',
         stock: '40',
